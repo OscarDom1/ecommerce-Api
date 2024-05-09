@@ -1,0 +1,115 @@
+<form action="/users/register_user" method="post">
+  <h1>New User Registration</h1>
+
+  <%  if(locals.error){ %>
+      <%  if(error === 'firstName is not allowed to be empty'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+              firstName is not allowed to be empty
+              </div>
+        <%  }%>
+      <%  } %>
+
+  <input type="text" placeholder="First Name" name = "firstName">
+  <br> <br>
+  <%  if(locals.error){ %>
+      <%  if(error === 'lastName is not allowed to be empty'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+              lastName is not allowed to be empty
+              </div>
+        <%  }%>
+      <%  } %>
+  <input type="text" placeholder="Last Name" name = "lastName">
+  <br> <br>
+  <%  if(locals.error){ %>
+      <%  if(error === 'email is not allowed to be empty'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+              email is not allowed to be empty
+              </div>
+        <%  }%>
+      <%  } %>
+  <input type="email" placeholder="Email Address" name = "email">
+  <br> <br>
+  <%  if(locals.error){ %>
+      <%  if(error === 'password is not allowed to be empty'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+              password is not allowed to be empty
+              </div>
+        <%  }%>
+      <%  } %>
+  <input type="text" placeholder="Password" name = "password">
+  <br> <br>
+  <%  if(locals.error){ %>
+      <%  if(error === 'Confirm password does not match'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+             Confirm password does not match
+              </div>
+        <%  }%>
+      <%  } %>
+
+  <input type="text" placeholder="Confirm Password" name = "confirm_password">
+  <br> <br>
+  <%  if(locals.error){ %>
+      <%  if(error === 'phoneNumber is not allowed to be empty'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+              phoneNumber is not allowed to be empty
+              </div>
+        <%  }%>
+      <%  } %>
+  <input type="text" placeholder="Phone Number" name = "phoneNumber">
+  <br> <br>
+  <%  if(locals.error){ %>
+      <%  if(error === 'age is not allowed to be empty'){%>
+            <div class = "name error" 
+            style = "
+            color: #ff0099;
+            margin: 10px 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+              ">
+              age is not allowed to be empty
+              </div>
+        <%  }%>
+      <%  } %>
+      
+  <input type="number" placeholder="Age" name = "age">
+  <br> <br>
+  <button type="submit">Register</button>
+  <br>
+  <p>Already registered? <a href="/login">Login</a></p>
+</form>
